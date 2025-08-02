@@ -196,27 +196,85 @@
 
 
 
+// import Image from "next/image";
+
+// export default function AboutIntro() {
+//   return (
+//     <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
+//       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 py-24 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+        
+//         {/* Left: Text Content */}
+//         <div className="md:w-1/2 text-center md:text-left text-black">
+//           <h2 className="text-sm tracking-widest uppercase font-semibold mb-4">
+//             Who We Are
+//           </h2>
+
+//           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+//             Pioneering Neuroscience with <br />
+//             <span className="font-extrabold">Nanotechnology & AI</span>
+//           </h1>
+
+//           <p className="text-lg md:text-xl leading-relaxed mb-8">
+//             Nanoroutes is a forward-thinking healthtech startup focused on diagnosing and treating
+//             neurological disorders—especially neuropathic pain—using precision nanotechnology and
+//             artificial intelligence.
+//           </p>
+
+//           <div className="mt-6">
+//             <a
+//               href="#contact"
+//               className="inline-block px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-900 transition duration-300"
+//             >
+//               Get in Touch
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* Right: AI Image */}
+//         <div className="md:w-1/2 flex justify-center items-center">
+//           <div className="relative w-full max-w-md bg-white p-4 rounded-xl shadow-none">
+//             <Image
+//               src="/images/ai.png"
+//               alt="AI Illustration"
+//               width={500}
+//               height={500}
+//               className="w-full h-auto object-contain"
+//               priority
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 
-import Image from "next/image";
+
+
+
+
+
+
+
+
 
 export default function AboutIntro() {
   return (
     <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 py-24 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 py-24 flex flex-col items-center justify-center gap-10">
         
-        {/* Left: Text Content */}
-        <div className="md:w-1/2 text-center md:text-left text-black">
-          <h2 className="text-sm tracking-widest uppercase font-semibold text-black mb-4">
+        {/* Text Content Only */}
+        <div className="w-full text-center text-black">
+          <h2 className="text-sm tracking-widest uppercase font-bold mb-4">
             Who We Are
           </h2>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-black">
+          <h1 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
             Pioneering Neuroscience with <br />
-            Nanotechnology & AI
+            <span className="font-black">Nanotechnology & AI</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-black leading-relaxed mb-8">
+          <p className="text-lg md:text-xl leading-relaxed mb-8">
             Nanoroutes is a forward-thinking healthtech startup focused on diagnosing and treating
             neurological disorders—especially neuropathic pain—using precision nanotechnology and
             artificial intelligence.
@@ -232,19 +290,6 @@ export default function AboutIntro() {
           </div>
         </div>
 
-        {/* Right: AI Image */}
-        <div className="md:w-1/2 flex justify-center items-center">
-          <div className="relative w-full max-w-md animate-fadeInUp">
-            <Image
-              src="/images/ai.png"
-              alt="AI Illustration"
-              width={500}
-              height={500}
-              className="w-full h-auto object-contain rounded-xl shadow-lg"
-              priority
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
