@@ -92,10 +92,45 @@
 
 
 
+// // src/app/page.tsx
+
+// import Navbar from "./components/Navbar";
+// import HeroSection from "./components/HeroSection";
+
+// export default function HomePage() {
+//   return (
+//     <>
+//       <Navbar />
+//       <main>
+//         <HeroSection />
+      
+//         {/* Add more sections here as needed */}
+//       </main>
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 // src/app/page.tsx
 
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import AboutIntro from "./components/about/AboutIntro";
+// import MissionVision from "./components/about/MissionVision";
+// import HowWeWork from "./components/about/HowWeWork";
+// import TimelineSection from "./components/about/TimelineSection";
+// You can continue importing other sections as you build them
 
 export default function HomePage() {
   return (
@@ -103,7 +138,18 @@ export default function HomePage() {
       <Navbar />
       <main>
         <HeroSection />
-        {/* Add more sections here as needed */}
+
+        {/* === ABOUT SECTIONS === */}
+        <AboutIntro />
+        {/* <MissionVision /> */}
+        {/* <HowWeWork />
+        <TimelineSection /> */}
+
+        {/* === FUTURE SECTIONS === */}
+        {/* <ServicesSection /> */}
+        {/* <ContactForm /> */}
+        {/* <FAQSection /> */}
+        {/* etc. */}
       </main>
     </>
   );
