@@ -607,30 +607,97 @@
 
 
 
+// import Image from "next/image";
+
+// export default function HeroSection() {
+//   return (
+//     <section
+//       className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat overflow-hidden"
+//       style={{
+//         backgroundImage: "url('/images/background.png')",
+//       }}
+//     >
+//       {/* Soft light overlay */}
+//       <div className="absolute inset-0 bg-[#f6f3ee]/90 backdrop-blur-sm z-0" />
+
+//       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-10 flex flex-col-reverse md:flex-row items-center justify-between gap-16 py-24 z-10">
+        
+//         {/* Left Side - Doctor Image (styled like AboutIntro) */}
+//         <div className="md:w-1/2 flex justify-center items-center">
+//           <div className="relative w-full max-w-md md:max-w-lg animate-fadeInUp">
+//             <Image
+//               src="/images/healthcare1.png"
+//               alt="Doctor Hero Image"
+//               width={500}
+//               height={500}
+//               className="w-full h-auto object-contain rounded-xl shadow-lg brightness-110 saturate-75"
+//               priority
+//             />
+//           </div>
+//         </div>
+
+//         {/* Right Side - Text Content */}
+//         <div className="md:w-1/2 text-black text-center md:text-left">
+//           <h2 className="text-sm tracking-widest uppercase font-semibold text-gray-500 mb-4">
+//             Precision Innovation
+//           </h2>
+
+//           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+//             <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent">
+//               Goodbye Guess Work,
+//             </span>
+//             <br />
+//             Hello Nanotech
+//           </h1>
+
+//           <div className="h-1 w-20 bg-black mb-6 mx-auto md:mx-0" />
+
+//           <p className="text-lg text-gray-700 leading-relaxed mb-8">
+//             Revolutionizing the future of{" "}
+//             <span className="font-semibold text-black">Neuroscience</span> with
+//             precision{" "}
+//             <span className="text-purple-700 font-semibold">Nanotechnology</span> and{" "}
+//             <span className="text-pink-700 font-semibold">AI</span>.
+//           </p>
+
+//           <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+//             <button className="px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-900 transition duration-300">
+//               Explore More
+//             </button>
+//             <button className="px-6 py-3 border border-black text-black rounded-full font-semibold hover:bg-black hover:text-white transition duration-300">
+//               Contact Us
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
+
+
+
+
+
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section
-      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/background.png')",
-      }}
-    >
-      {/* Soft light overlay */}
-      <div className="absolute inset-0 bg-[#f6f3ee]/90 backdrop-blur-sm z-0" />
-
+    <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-10 flex flex-col-reverse md:flex-row items-center justify-between gap-16 py-24 z-10">
         
-        {/* Left Side - Doctor Image (styled like AboutIntro) */}
+        {/* Left Side - Image */}
         <div className="md:w-1/2 flex justify-center items-center">
-          <div className="relative w-full max-w-md md:max-w-lg animate-fadeInUp">
+          <div className="relative w-full max-w-md md:max-w-lg">
             <Image
               src="/images/healthcare1.png"
               alt="Doctor Hero Image"
               width={500}
               height={500}
-              className="w-full h-auto object-contain rounded-xl shadow-lg brightness-110 saturate-75"
+              className="w-full h-auto object-contain rounded-xl shadow-lg"
               priority
             />
           </div>
@@ -638,26 +705,23 @@ export default function HeroSection() {
 
         {/* Right Side - Text Content */}
         <div className="md:w-1/2 text-black text-center md:text-left">
-          <h2 className="text-sm tracking-widest uppercase font-semibold text-gray-500 mb-4">
+          <h2 className="text-sm tracking-widest uppercase font-semibold text-black mb-4">
             Precision Innovation
           </h2>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent">
-              Goodbye Guess Work,
-            </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-black">
+            Goodbye Guess Work,
             <br />
             Hello Nanotech
           </h1>
 
           <div className="h-1 w-20 bg-black mb-6 mx-auto md:mx-0" />
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          <p className="text-lg text-black leading-relaxed mb-8">
             Revolutionizing the future of{" "}
-            <span className="font-semibold text-black">Neuroscience</span> with
-            precision{" "}
-            <span className="text-purple-700 font-semibold">Nanotechnology</span> and{" "}
-            <span className="text-pink-700 font-semibold">AI</span>.
+            <span className="font-semibold">Neuroscience</span> with precision{" "}
+            <span className="font-semibold">Nanotechnology</span> and{" "}
+            <span className="font-semibold">AI</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
