@@ -247,24 +247,109 @@
 
 
 
+// // src/components/Navbar.tsx
+
+// "use client";
+
+// import { useState } from "react";
+// import { Menu, X } from "lucide-react";
+
+// export default function Navbar() {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const toggleMenu = () => setIsOpen(!isOpen);
+
+//   return (
+//     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+//       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+//         {/* Logo */}
+//         <div className="text-2xl font-bold text-black tracking-wide">
+//           Nanoroutes
+//         </div>
+
+//         {/* Desktop Menu */}
+//         <nav className="hidden md:flex space-x-8 text-sm font-medium text-black">
+//           <a href="#home" className="hover:text-gray-700">Home</a>
+//           <a href="#about" className="hover:text-gray-700">About</a>
+//           <a href="#services" className="hover:text-gray-700">Services</a>
+//           <a href="#projects" className="hover:text-gray-700">Projects</a>
+//           <a href="#contact" className="hover:text-gray-700">Contact</a>
+//         </nav>
+
+//         {/* Mobile Menu Icon */}
+//         <div className="md:hidden text-black">
+//           <button onClick={toggleMenu}>
+//             {isOpen ? <X size={24} /> : <Menu size={24} />}
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* Mobile Menu Dropdown */}
+//       {isOpen && (
+//         <div className="md:hidden bg-white/90 backdrop-blur-md px-6 pb-4 shadow-md">
+//           <nav className="flex flex-col space-y-4 text-sm font-medium text-black">
+//             <a href="#home" onClick={toggleMenu}>Home</a>
+//             <a href="#about" onClick={toggleMenu}>About</a>
+//             <a href="#services" onClick={toggleMenu}>Services</a>
+//             <a href="#projects" onClick={toggleMenu}>Projects</a>
+//             <a href="#contact" onClick={toggleMenu}>Contact</a>
+//           </nav>
+//         </div>
+//       )}
+//     </header>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // src/components/Navbar.tsx
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold text-black tracking-wide">
-          Nanoroutes
-        </div>
+        <div className="text-2xl font-bold text-black tracking-wide">Nanoroutes</div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium text-black">
